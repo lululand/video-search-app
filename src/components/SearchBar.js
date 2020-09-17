@@ -8,9 +8,10 @@ class SearchBar extends React.Component {
   };
 
   onFormSubmit = event => {
-    event.preventDefault();
+    event.preventDefault(); // stops default behavior hitting enter
 
-    // TODO: make sure we call the callback from parent component
+    // calling the callback from parent component
+    this.props.callParentSubmit(this.state.term);
   };
 
   render() {
